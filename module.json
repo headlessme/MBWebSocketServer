@@ -1,0 +1,17 @@
+{
+  "name": "mbwebsocketserver",
+  "version": "0.0.1",
+  "description": "MBWebSocketServer",
+  "author": "Andy Pritchard <andy.pritchard@arm.com>",
+  "homepage": "",
+  "licenses": [
+    {
+      "url": "about:blank",
+      "type": ""
+    }
+  ],
+  "dependencies": {},
+  "extraObjCFlags": [
+    "-fobjc-arc"
+  ]
+}

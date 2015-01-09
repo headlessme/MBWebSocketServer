@@ -4,7 +4,7 @@
 // MBWebSocketServer accepts client connections as soon as it is instantiated.
 // Implementated against: http://tools.ietf.org/id/draft-ietf-hybi-thewebsocketprotocol-10
 
-#import "GCDAsyncSocket.h"
+#import "mbwebsocketserver/GCDAsyncSocket.h"
 
 @protocol MBWebSocketServerDelegate;
 

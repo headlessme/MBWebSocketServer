@@ -2,7 +2,7 @@
 // This class is in the public domain.
 
 #import <CommonCrypto/CommonDigest.h>
-#import "MBWebSocketServer.h"
+#import "mbwebsocketserver/MBWebSocketServer.h"
 
 @interface MBWebSocketServer () <GCDAsyncSocketDelegate>
 @end
@@ -10,14 +10,6 @@
 @interface NSString (MBWebSocketServer)
 - (id)sha1base64;
 @end
-
-static unsigned long long ntohll(unsigned long long v) {
-    union { unsigned long lv[2]; unsigned long long llv; } u;
-    u.llv = v;
-    return ((unsigned long long)ntohl(u.lv[0]) << 32) | (unsigned long long)ntohl(u.lv[1]);
-}
-
-
 
 @implementation MBWebSocketServer
 @dynamic clientCount;
