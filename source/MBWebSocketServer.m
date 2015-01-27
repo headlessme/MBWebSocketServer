@@ -11,11 +11,13 @@
 - (id)sha1base64;
 @end
 
-static unsigned long long ntohll(unsigned long long v) {		
-    union { unsigned long lv[2]; unsigned long long llv; } u;		
-    u.llv = v;		
-    return ((unsigned long long)ntohl(u.lv[0]) << 32) | (unsigned long long)ntohl(u.lv[1]);		
+#ifndef ntohll
+static unsigned long long ntohll(unsigned long long v) {
+    union { unsigned long lv[2]; unsigned long long llv; } u;
+    u.llv = v;
+    return ((unsigned long long)ntohl(u.lv[0]) << 32) | (unsigned long long)ntohl(u.lv[1]);
 }
+#endif
 
 @implementation MBWebSocketServer
 @dynamic clientCount;
